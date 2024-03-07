@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Featured Projects",
+    "description": "I have worked on a variety of projects, ranging from small business websites to complex web applications. Some of my notable projects include an e-commerce platform, a social media dashboard, and a portfolio website. Each project was carefully designed and implemented to meet the client's specific requirements and exceed their expectations.",
+    "image": "/imgs/photo-3.jpg"
+  },
+  {
+    "id": 2,
+    "title": "E-commerce Platform",
+    "description": "The e-commerce platform I developed allows businesses to easily sell their products online. It features a user-friendly interface, secure payment processing, and inventory management. The platform is fully customizable and can be tailored to meet the unique needs of each business.",
+    "image": "/imgs/photo-4.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Social Media Dashboard",
+    "description": "The social media dashboard I created provides users with a centralized hub for managing their social media accounts. It includes features such as post scheduling, analytics tracking, and content curation. The dashboard is designed to streamline social media management and increase productivity.",
+    "image": "/imgs/photo-5.jpg"
+  }
+]
