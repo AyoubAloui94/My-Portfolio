@@ -17,7 +17,8 @@ function ContactForm() {
     e.preventDefault()
     try {
       const recaptchaValue = recaptchaRef.current.getValue()
-
+      const [name, email, message] = [nameRef.current.value, emailRef.current.value, messageRef.current.value]
+      if (!name || !email || !message) return
       if (!recaptchaValue) throw new Error("reCaptcha invalid")
       const params = {
         user_name: nameRef.current.value,
@@ -31,6 +32,7 @@ function ContactForm() {
       })
 
       toast.success("Message successfully sent!")
+
       nameRef.current.value = ""
       emailRef.current.value = ""
       messageRef.current.value = ""
@@ -45,7 +47,7 @@ function ContactForm() {
   return (
     <form className="flex flex-col justify-center gap-4" onSubmit={handleSubmit}>
       <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef}>
-        Name
+        Name*
       </FormRow>
       <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required>
         Your email*
