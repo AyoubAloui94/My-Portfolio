@@ -3,6 +3,7 @@ import FormRow from "./FormRow"
 import emailjs from "@emailjs/browser"
 import { toast } from "react-hot-toast"
 import SpinnerMini from "./SpinnerMini"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 function ContactForm() {
   const nameRef = useRef()
@@ -34,21 +35,23 @@ function ContactForm() {
   }
 
   return (
-    <form className="flex flex-col justify-center " onSubmit={handleSubmit} ref={formRef}>
-      <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef}>
-        Name
-      </FormRow>
-      <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required>
-        Your email*
-      </FormRow>
-      <FormRow name="message" id="message" type="text" placeholder="Your message" ref={messageRef} isTextArea={true} required>
-        Message*
-      </FormRow>
+    <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_RECAPTCHA_KEY}>
+      <form className="flex flex-col justify-center gap-4" onSubmit={handleSubmit} ref={formRef}>
+        <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef}>
+          Name
+        </FormRow>
+        <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required>
+          Your email*
+        </FormRow>
+        <FormRow name="message" id="message" type="text" placeholder="Your message" ref={messageRef} isTextArea={true} required>
+          Message*
+        </FormRow>
 
-      <button type="submit" className="bg-[#806065] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-md mt-4" disabled={isLoading}>
-        {isLoading ? <SpinnerMini /> : "Submit"}
-      </button>
-    </form>
+        <button type="submit" className="bg-[#806065] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-md self-center" disabled={isLoading}>
+          {isLoading ? <SpinnerMini /> : "Submit"}
+        </button>
+      </form>
+    </GoogleReCaptchaProvider>
   )
 }
 
