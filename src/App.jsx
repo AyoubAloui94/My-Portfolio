@@ -5,12 +5,12 @@ import Portfolio from "./pages/Portfolio"
 
 import Header from "./components/Header"
 import { Toaster } from "react-hot-toast"
-// import Footer from "./components/Footer"
+import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div className="mx-6">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="mx-6">
         <Header />
         <Routes>
           <Route index element={<Navigate replace to={"home"} />} />
@@ -39,9 +39,9 @@ function App() {
             }
           }}
         />
-      </BrowserRouter>
-      {/* <Footer /> */}
-    </div>
+      </div>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
