@@ -1,5 +1,7 @@
+import PortfolioProjects from "../components/PortfolioProjects"
+
 function Portfolio() {
-  return <div>portfolio</div>
+  return <PortfolioProjects />
 }
 
 export default Portfolio
