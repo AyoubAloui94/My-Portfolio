@@ -16,10 +16,10 @@ function MyBackground() {
           </div>
         </div>
         <div className="flex flex-col flex-1  md:justify-center  ">
-          <img src="https://cdn.shopify.com/s/files/1/0275/5932/9928/files/photo-1.webp?v=1710023808" className="max-h-80 object-cover aspect-square md:w-full h-full rounded-md" alt="photo-1" loading="eager" />
+          <img src="imgs/new/photo-1.webp" className="max-h-80 object-cover aspect-square md:w-full h-full rounded-md" alt="photo-1" loading="eager" />
         </div>
         <div className="flex flex-col flex-1  md:justify-center">
-          <img src="imgs/photo-2.webp" className="max-h-80 md:max-w-80 aspect-square object-cover rounded-md" alt="photo-2" loading="eager" />
+          <img src="imgs/new/photo-2.webp" className="max-h-80 md:max-w-80 aspect-square object-cover rounded-md" alt="photo-2" loading="eager" />
         </div>
       </div>
     </div>
