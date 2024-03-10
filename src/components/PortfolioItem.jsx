@@ -1,17 +1,25 @@
 import { Link } from "react-router-dom"
 import { checkIfImageExists } from "../utils/helpers"
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 function PortfolioItem({ project }) {
   const { name, homepage: website, html_url: repoUrl, description } = project
   const [src, setSrc] = useState("")
 
-  function test(exists) {
-    if (exists) setSrc(`/imgs/${name}.png`)
-    else setSrc("/imgs/photo-3.webp")
-  }
+  const test = useCallback(
+    function test(exists) {
+      if (exists) setSrc(`/imgs/${name}.png`)
+      else setSrc("/imgs/photo-3.webp")
+    },
+    [name]
+  )
 
-  checkIfImageExists(`/imgs/${name}.png`, test)
+  useEffect(
+    function () {
+      checkIfImageExists(`/imgs/${name}.png`, test)
+    },
+    [name, test]
+  )
 
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-24">

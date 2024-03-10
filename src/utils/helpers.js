@@ -4,16 +4,13 @@ export function checkIfImageExists(url, fn) {
 
   if (img.complete) {
     fn(true)
-    console.log("yup")
   } else {
     img.onload = () => {
       fn(true)
-      console.log("yup")
     }
   }
 
   img.onerror = () => {
     fn(false)
-    console.log("nope")
   }
 }
