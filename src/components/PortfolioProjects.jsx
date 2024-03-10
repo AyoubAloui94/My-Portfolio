@@ -1,9 +1,24 @@
 import PortfolioItem from "./PortfolioItem"
 import { useProjects } from "../hooks/useProjects"
 import Spinner from "./Spinner"
+import { useSearchParams } from "react-router-dom"
+import { useEffect } from "react"
+import Pagination from "./Pagination"
 
 function PortfolioProjects() {
-  const { projects, isLoading } = useProjects()
+  const { projects, isLoading, count } = useProjects()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
+
+  useEffect(
+    function () {
+      if (count && Math.ceil(count / import.meta.env.VITE_PER_PAGE) < currentPage && currentPage > 1) {
+        searchParams.set("page", currentPage - 1)
+        setSearchParams(searchParams)
+      } else return
+    },
+    [count, currentPage, searchParams, setSearchParams]
+  )
 
   if (isLoading) return <Spinner />
 
@@ -18,6 +33,7 @@ function PortfolioProjects() {
           ))}
         </div>
       )}
+      <Pagination count={count} />
     </div>
   )
 }
