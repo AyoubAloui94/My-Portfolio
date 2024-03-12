@@ -58,7 +58,7 @@ function ContactForm() {
       <div className="flex justify-center">
         <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} />
       </div>
-      <button type="submit" className="bg-[#806065] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-md self-center" disabled={isLoading}>
+      <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>
         {isLoading ? <SpinnerMini /> : "Submit"}
       </button>
     </form>
