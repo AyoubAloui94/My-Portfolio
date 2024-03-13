@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Footer() {
   return (
-    <footer className="flex flex-col sm:flex-row gap-6 sm:justify-evenly pt-8 pb-24 px-6 sm:px-0 bg-orange-100 mt-4">
+    <footer className="flex flex-col sm:flex-row gap-6 sm:justify-evenly pt-8 pb-12 px-6 sm:px-0 bg-orange-100 mt-4 bottom-0">
       <div className="flex flex-col gap-3">
         <h1 className="text-xl font-bold">Contact</h1>
         <span>contact@webitgenius.com</span>

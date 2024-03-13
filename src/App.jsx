@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast"
 import Footer from "./components/Footer"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import ScrollToTop from "./components/ScrollToTop"
 
 const queryClient = new QueryClient()
 
@@ -16,8 +17,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
+        <Header />
         <div className="mx-6">
-          <Header />
+          <ScrollToTop />
           <Routes>
             <Route index element={<Navigate replace to={"home"} />} />
             <Route path="/home" element={<Home />} />

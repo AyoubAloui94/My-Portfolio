@@ -8,7 +8,7 @@ function PortfolioItem({ project }) {
 
   const test = useCallback(
     function test(exists) {
-      if (exists) setSrc(`/imgs/${name}.png`)
+      if (exists) setSrc(`/imgs/${name}.webp`)
       else setSrc("/imgs/photo-3.webp")
     },
     [name]
@@ -16,15 +16,15 @@ function PortfolioItem({ project }) {
 
   useEffect(
     function () {
-      checkIfImageExists(`/imgs/${name}.png`, test)
+      checkIfImageExists(`/imgs/${name}.webp`, test)
     },
     [name, test]
   )
 
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-24">
-      <div className="md:basis-1/2">
-        <img src={src} alt={name} className="w-96 h-72 md:h-96 md:w-full object-cover rounded-md" loading="lazy" />
+      <div className="md:basis-1/2 ">
+        <img src={src} alt={name} className="w-96 h-72 md:h-96 md:w-full object-cover rounded-md shadow-xl" loading="lazy" />
       </div>
       <div className="flex flex-col gap-4 basis-1/2">
         <h1 className="text-xl font-bold">{name}</h1>

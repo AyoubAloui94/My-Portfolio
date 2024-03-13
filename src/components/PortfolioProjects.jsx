@@ -5,26 +5,28 @@ import { useSearchParams } from "react-router-dom"
 import { useEffect } from "react"
 import Pagination from "./Pagination"
 
-function PortfolioProjects() {
+function PortfolioProjects({ isHomePage = false }) {
   const { projects, isLoading, count } = useProjects()
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
 
   useEffect(
     function () {
-      if (count && Math.ceil(count / import.meta.env.VITE_PER_PAGE) < currentPage && currentPage > 1) {
-        searchParams.set("page", currentPage - 1)
-        setSearchParams(searchParams)
-      } else return
+      if (!isHomePage) {
+        if (count && Math.ceil(count / import.meta.env.VITE_PER_PAGE) < currentPage && currentPage > 1) {
+          searchParams.set("page", currentPage - 1)
+          setSearchParams(searchParams)
+        } else return
+      }
     },
-    [count, currentPage, searchParams, setSearchParams]
+    [count, currentPage, searchParams, setSearchParams, isHomePage]
   )
 
   if (isLoading) return <Spinner />
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Projects</h1>
+      <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
 
       {!projects.length ? null : (
         <div className="flex flex-col gap-8 mb-8">
@@ -33,7 +35,7 @@ function PortfolioProjects() {
           ))}
         </div>
       )}
-      <Pagination count={count} />
+      {isHomePage ? null : <Pagination count={count} />}
     </div>
   )
 }
