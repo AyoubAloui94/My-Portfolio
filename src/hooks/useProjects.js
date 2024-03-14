@@ -20,12 +20,12 @@ export function useProjects() {
 
   if (page < pageCount)
     queryClient.prefetchQuery({
-      queryKey: ["bookings", page + 1],
+      queryKey: ["projects", page + 1],
       queryFn: () => getProjects(page + 1)
     })
   if (page > 1)
     queryClient.prefetchQuery({
-      queryKey: ["bookings", page - 1],
+      queryKey: ["projects", page - 1],
       queryFn: () => getProjects(page - 1)
     })
 
