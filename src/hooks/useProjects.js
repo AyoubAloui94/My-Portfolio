@@ -8,7 +8,7 @@ export function useProjects() {
   const page = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
 
   const {
-    data: { data: projects, count } = {},
+    data: { data: projects, count, allData: allProjects } = {},
     isLoading,
     error
   } = useQuery({
@@ -29,5 +29,7 @@ export function useProjects() {
       queryFn: () => getProjects(page - 1)
     })
 
-  return { projects, isLoading, error, count }
+  const featuredProjects = allProjects?.filter(proj => proj.id === 761037894 || proj.id === 718243904 || proj.id === 681357811 || proj.id === 713639474)
+
+  return { projects, featuredProjects, isLoading, error, count }
 }

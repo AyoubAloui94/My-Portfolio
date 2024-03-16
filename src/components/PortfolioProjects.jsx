@@ -6,9 +6,11 @@ import { useEffect } from "react"
 import Pagination from "./Pagination"
 
 function PortfolioProjects({ isHomePage = false }) {
-  const { projects, isLoading, count } = useProjects()
+  const { projects, isLoading, count, featuredProjects } = useProjects()
+  console.log(projects)
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
+  const displayProjects = isHomePage ? featuredProjects : projects
 
   useEffect(
     function () {
@@ -28,9 +30,9 @@ function PortfolioProjects({ isHomePage = false }) {
     <div>
       <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
 
-      {!projects.length ? null : (
+      {!displayProjects.length ? null : (
         <div className="flex flex-col gap-8 mb-8">
-          {projects.map(project => (
+          {displayProjects.map(project => (
             <PortfolioItem key={project.id} project={project} />
           ))}
         </div>
