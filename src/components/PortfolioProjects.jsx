@@ -7,7 +7,7 @@ import Pagination from "./Pagination"
 
 function PortfolioProjects({ isHomePage = false }) {
   const { projects, isLoading, count, featuredProjects } = useProjects()
-  console.log(projects)
+
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
   const displayProjects = isHomePage ? featuredProjects : projects
