@@ -1,6 +1,4 @@
-import projects from "../data/projects.json"
 import PortfolioProjects from "./PortfolioProjects"
-import ProjectItem from "./ProjectItem"
 
 function Projects() {
   return (

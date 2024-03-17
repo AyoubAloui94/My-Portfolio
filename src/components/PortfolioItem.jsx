@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import { checkIfImageExists, formatName } from "../utils/helpers"
-import { useCallback, useEffect, useState } from "react"
+import { formatName } from "../utils/helpers"
 
 function PortfolioItem({ project }) {
   const { name, homepage: website, html_url: repoUrl, description } = project
@@ -30,7 +29,7 @@ function PortfolioItem({ project }) {
       </div>
       <div className="flex flex-col gap-4 basis-1/2">
         <h1 className="text-xl font-bold">{formatName(name)}</h1>
-        {description ? <p>{description}</p> : <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, ligula condimentum suscipit lacinia, arcu lacus venenatis massa, eu posuere elit sem id tellus. Suspendisse eleifend velit ac volutpat commodo. Nunc mattis mauris tristique ligula posuere, sit amet vestibulum ex condimentum. Maecenas iaculis quam in arcu sodales, nec rhoncus velit consequat. Donec at ante a neque vulputate finibus et vitae lacus. Sed hendrerit posuere magna sit amet feugiat. Quisque volutpat commodo tellus non hendrerit. Donec molestie justo turpis, quis feugiat tortor molestie sed. Donec ac nulla metus. Fusce sed ornare nulla. Phasellus blandit volutpat nisl, non iaculis nisi sagittis sed. Praesent lobortis neque vel dui tristique lobortis. Aliquam auctor lobortis posuere. Mauris egestas laoreet imperdiet. Donec gravida ex at lacus vehicula, nec luctus lorem iaculis.</p>}
+        {description ? <p>{description}</p> : <p>No description yet.</p>}
         <div className="flex gap-4 justify-center items-center mt-3">
           <Link className="bg-[#4f46e5] shadow-md hover:bg-[#6159f7] transition duration-300 text-gray-100 w-28 py-2 text-sm font-bold rounded-xl text-center" to={website} target="_blank" rel="noopener noreferrer">
             View App
