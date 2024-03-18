@@ -25,7 +25,12 @@ function PortfolioProjects({ isHomePage = false }) {
     [count, currentPage, searchParams, setSearchParams, isHomePage]
   )
 
-  if (isLoading) return <Spinner />
+  if (isLoading)
+    return (
+      <div className="flex flex-grow flex-col min-h-[100dvh]">
+        <Spinner />
+      </div>
+    )
 
   return (
     <div>
