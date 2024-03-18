@@ -29,12 +29,14 @@ function PortfolioProjects({ isHomePage = false }) {
 
   return (
     <div>
-      <Helmet prioritizeSeoTags>
-        <meta charSet="utf-8" />
-        <title>Web & IT Genius | My Portfolio</title>
-        <meta name="description" content="Welcome to my portfolio page! This is a non exhaustive list of some of the projects I had fun building. From simple apps that took a day or an afternoon to build to some pretty complex apps that took a lot of research, time and documentation to build." />
-        <link rel="canonical" href="https://webitgenius.com/portfolio" />
-      </Helmet>
+      {!isHomePage && (
+        <Helmet prioritizeSeoTags>
+          <meta charSet="utf-8" />
+          <title>Web & IT Genius | My Portfolio</title>
+          <meta name="description" content="Welcome to my portfolio page! This is a non exhaustive list of some of the projects I had fun building. From simple apps that took a day or an afternoon to build to some pretty complex apps that took a lot of research, time and documentation to build." />
+          <link rel="canonical" href="https://webitgenius.com/portfolio" />
+        </Helmet>
+      )}
       <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
 
       {!displayProjects.length ? null : (
