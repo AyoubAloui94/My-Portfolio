@@ -51,7 +51,7 @@ function PortfolioProjects({ isHomePage = false }) {
           ))}
         </div>
       )}
-      {isHomePage ? null : <Pagination count={count} />}
+      {isHomePage ? null : count > import.meta.env.VITE_PER_PAGE ? <Pagination count={count} /> : null}
     </div>
   )
 }

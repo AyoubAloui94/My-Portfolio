@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react"
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2"
 import { useSearchParams } from "react-router-dom"
 import styled from "styled-components"
@@ -71,6 +72,13 @@ function Pagination({ count }) {
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
   const pageCount = Math.ceil(count / import.meta.env.VITE_PER_PAGE)
+
+  useLayoutEffect(
+    function () {
+      window.scroll({ top: 0, left: 0, behavior: "smooth" })
+    },
+    [currentPage]
+  )
 
   function nextPage() {
     const next = currentPage === pageCount ? currentPage : currentPage + 1
