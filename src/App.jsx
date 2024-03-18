@@ -24,7 +24,7 @@ function App() {
             <meta charSet="utf-8" />
             <title>Web & IT Genius | Home</title>
             <meta name="description" content={`${description}`} />
-            <link rel="canonical" href="https://webitgenius.com/" />
+            <link rel="canonical" href="https://webitgenius.com/home" />
           </Helmet>
           <Header />
           <div className="mx-6">
