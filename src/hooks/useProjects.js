@@ -8,7 +8,7 @@ export function useProjects() {
   const page = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
 
   const {
-    data: { data: projects } = {},
+    data: { data: projects = [] } = {},
     isLoading: isLoading1,
     error1
   } = useQuery({
@@ -18,7 +18,7 @@ export function useProjects() {
   })
 
   const {
-    data: { data: allProjects } = {},
+    data: { data: allProjects = [] } = {},
     count,
     isLoading: isLoading2,
     error2
@@ -41,7 +41,7 @@ export function useProjects() {
       queryFn: () => getProjects(page - 1)
     })
 
-  const featuredProjects = allProjects.length ? allProjects?.filter(proj => proj.id === 761037894 || proj.id === 718243904 || proj.id === 681357811 || proj.id === 713639474) : []
+  const featuredProjects = allProjects?.length ? allProjects?.filter(proj => proj.id === 761037894 || proj.id === 718243904 || proj.id === 681357811 || proj.id === 713639474) : []
 
   const isLoading = isLoading1 || isLoading2
 
