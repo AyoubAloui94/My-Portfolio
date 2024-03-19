@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function MyBackground() {
   return (
     <div className="bg-black px-7 py-8 text-gray-50 rounded-md">
-      <div className="grid grid-cols-1 md:grid-cols-[3fr,1fr] gap-6 md:gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr,1fr] gap-6 md:gap-4">
         <div className="flex flex-col gap-4 text-justify md:pr-10">
           <h2 className="text-center md:text-left text-lg font-bold">A little bit about me</h2>
           {/* <p className="md:text-xl">I am a web and react applications developer with a passion for creating visually appealing and user-friendly websites. My background includes extensive experience in HTML, CSS, and JavaScript, as well as a strong knowledge of responsive design and cross-browser compatibility. I am always eager to learn new technologies and stay updated with the latest trends in web development.</p> */}
@@ -17,19 +17,23 @@ function MyBackground() {
             </Link>{" "}
           </p>
         </div>
-        <div className="flex flex-col flex-1  md:justify-center items-center">
-          <img src="imgs/me.webp" className="md:max-h-80 md:max-w-80 w-60 md:w-80 aspect-square md:h-80 object-cover rounded-full md:rounded-xl" alt="photo-2" loading="eager" />
+        <div className="flex flex-col flex-1  md:justify-center items-center md:items-start">
+          <img src="imgs/me.webp" className="md:max-h-80 md:max-w-80 w-60 md:w-52 aspect-square md:h-52 object-cover rounded-full md:rounded-xl" alt="photo-2" loading="eager" />
         </div>
         <div className="md:flex flex-col flex-1  md:justify-center md:pr-10 hidden">
-          <img src="imgs/photo-1.webp" className="max-h-80 object-cover aspect-square md:w-full h-full rounded-xl" alt="photo-1" loading="eager" />
+          <img src="imgs/photo-1.webp" className="max-h-60 object-cover aspect-square md:w-full h-full rounded-xl" alt="photo-1" loading="eager" />
         </div>
-        <div className="flex flex-col gap-4 md:pt-5">
-          <h2 className="text-center md:text-left text-lg font-bold">Skills</h2>
+        <div className="flex flex-col gap-4">
+          <h2 className="text-center md:text-left text-lg font-bold">Experience</h2>
           <div className="flex flex-col gap-4 items-center md:items-start">
-            <p>Web Developer</p>
-            <p>2020 - Present</p>
-            <p>Front End Development</p>
-            <p>2019 - 2020</p>
+            <div className="flex flex-col  items-center md:items-start">
+              <p>Web Developer</p>
+              <p>2020 - Present</p>
+            </div>
+            <div className="flex flex-col items-center md:items-start">
+              <p>Front End Development</p>
+              <p>2019 - 2020</p>
+            </div>
           </div>
         </div>
       </div>
