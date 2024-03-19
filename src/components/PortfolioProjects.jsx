@@ -27,7 +27,7 @@ function PortfolioProjects({ isHomePage = false }) {
 
   if (isLoading)
     return (
-      <div className="flex flex-grow flex-col min-h-[29rem]">
+      <div className="flex flex-grow flex-col min-h-[40rem]">
         <Spinner />
       </div>
     )
