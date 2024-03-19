@@ -18,8 +18,7 @@ export function useProjects() {
   })
 
   const {
-    data: { data: allProjects = [] } = {},
-    count,
+    data: { data: allProjects = [], count } = {},
     isLoading: isLoading2,
     error2
   } = useQuery({
