@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm"
 
 function Contact() {
   return (
-    <div className="flex gap-6 flex-col md:mx-56 min-h-[65dvh]">
+    <div className="flex gap-6 flex-col md:mx-56 h-[65dvh]">
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>Web & IT Genius | Contact</title>
