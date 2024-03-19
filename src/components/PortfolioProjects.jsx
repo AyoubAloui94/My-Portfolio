@@ -46,7 +46,7 @@ function PortfolioProjects({ isHomePage = false }) {
       <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
 
       {!displayProjects.length ? (
-        <div className="flex flex-grow flex-col min-h-[100dvh]"></div>
+        <div className="flex flex-grow flex-col min-h-[29rem]"></div>
       ) : (
         <div className="flex flex-col gap-8 mb-8">
           {displayProjects.map((project, index) => (
