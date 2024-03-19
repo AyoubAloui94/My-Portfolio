@@ -27,7 +27,7 @@ function PortfolioProjects({ isHomePage = false }) {
 
   if (isLoading)
     return (
-      <div className="flex flex-grow flex-col min-h-[100dvh]">
+      <div className="flex flex-grow flex-col min-h-[29rem]">
         <Spinner />
       </div>
     )
@@ -40,6 +40,7 @@ function PortfolioProjects({ isHomePage = false }) {
           <title>Web & IT Genius | My Portfolio</title>
           <meta name="description" content="Welcome to my portfolio page! This is a non exhaustive list of some of the projects I had fun building. From simple apps that took a day or an afternoon to build to some pretty complex apps that took a lot of research, time and documentation to build." />
           <link rel="canonical" href="https://webitgenius.com/portfolio" />
+          <link rel="preload" fetchPriority="high" as="image" href="/imgs/projects/Bankist-App.webp" type="image/webp" />
         </Helmet>
       )}
       <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
