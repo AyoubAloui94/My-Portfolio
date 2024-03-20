@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function AboutMe() {
+function MyStory() {
   const [isExpanded, setIsExpanded] = useState(false)
   console.log(5 == "5")
   return (
@@ -23,4 +23,4 @@ function AboutMe() {
   )
 }
 
-export default AboutMe
+export default MyStory

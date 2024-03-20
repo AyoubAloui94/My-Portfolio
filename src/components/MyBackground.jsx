@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 
 function MyBackground() {
   return (
     <div className="bg-black px-7 py-8 text-gray-50 rounded-md">
+      <Helmet prioritizeSeoTags>
+        <link rel="preload" fetchPriority="high" as="image" href="/imgs/me.webp" type="image/webp" />
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-[3fr,1fr] gap-6 md:gap-4">
         <div className="flex flex-col gap-4 text-justify md:pr-10">
           <h2 className="text-center md:text-left text-lg font-bold">A little bit about me</h2>

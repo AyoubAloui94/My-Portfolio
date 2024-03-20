@@ -1,10 +1,10 @@
-import AboutMe from "../components/AboutMe"
+import MyStory from "../components/MyStory"
 import Skills from "../components/Skills"
 
 function About() {
   return (
     <div className="min-h-[29rem]">
-      <AboutMe />
+      <MyStory />
       <Skills />
     </div>
   )
