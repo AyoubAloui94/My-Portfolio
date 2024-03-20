@@ -26,7 +26,6 @@ function App() {
             <title>Web & IT Genius | Home</title>
             <meta name="description" content={`${description}`} />
             <link rel="canonical" href="https://webitgenius.com/home" />
-            <link rel="preload" fetchPriority="high" as="image" href="/imgs/me.webp" type="image/webp" />
           </Helmet>
           <Header />
           <div className="mx-6">
