@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Portfolio from "./pages/Portfolio"
@@ -21,12 +21,6 @@ function App() {
       <HelmetProvider>
         <ReactQueryDevtools initialIsOpen={false} />
         <BrowserRouter>
-          <Helmet prioritizeSeoTags>
-            <meta charSet="utf-8" />
-            <title>Web & IT Genius | Home</title>
-            <meta name="description" content={`${description}`} />
-            <link rel="canonical" href="https://webitgenius.com/home" />
-          </Helmet>
           <Header />
           <div className="mx-6">
             <ScrollToTop />
