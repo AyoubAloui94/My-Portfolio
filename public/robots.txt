@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /home
-Allow: /portfolio
-Allow: /about
 Disallow: /contact

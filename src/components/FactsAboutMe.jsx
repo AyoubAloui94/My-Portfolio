@@ -37,3 +37,5 @@ function FactsAboutMe() {
 }
 
 export default FactsAboutMe
+
+// <FactBody>Being unable to switch off while a problem is unsolved: figures that my biggest weakness has to do with my biggest strength, but it&lsquo;s true, solving problems for me is a double-edged sword. Not being able to figure out the solution to a problem can make me pause everything else or not do anything else until that one problem is solved, sometimes it gets to the point of obsession where I barely can sleep and whenever I do I dream about that one problem and keep thinking of ways to solve it. My work-around is, if it happens while building an app for example, whenever I can tell that a certain task is gonna be problematic, to take care of everything else I can and try to research the problem during my short breaks, and only fully jump into solving it once everything else is basically done. Only downside is sometimes complex problems don&lsquo;t give you a heads-up and so if you&lsquo;re like me, you go down that wormhole...</FactBody>
