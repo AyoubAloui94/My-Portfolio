@@ -8,7 +8,7 @@ function About() {
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>Web & IT Genius | About</title>
-        <meta name="description" content={`${"test"}`} />
+        <meta name="description" content={"Here is my skillset along with some more info about me"} />
         <link rel="canonical" href="https://webitgenius.com/about" />
       </Helmet>
       <Skills />

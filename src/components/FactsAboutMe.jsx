@@ -27,9 +27,9 @@ function FactsAboutMe() {
       <Fact>
         <FactTitle>How I became a developer</FactTitle>
         <FactBody>
-          Towards the end of 2019, 2 friends of mine launched an E-commerce startup and needed a web developer so I stepped up since I was the only one out of the 3 of us who had any web development knowledge. Then Covid lockdowns happened and I had more free time to learn and practice my programming skills. I have been writing code ever since. (Full story{" "}
+          Towards the end of 2019, 2 friends of mine launched an E-commerce startup and needed a web developer so I stepped up since I was the only one out of the 3 of us who had any web development knowledge. Then Covid lockdowns happened and I had more free time to learn and practice my programming skills. I have been writing code ever since. (
           <Link className="text-sky-700 hover:text-sky-500 underline underline-offset-2 transition-colors duration-200" to={"/mystory"}>
-            here
+            Full story here
           </Link>{" "}
           )
         </FactBody>
