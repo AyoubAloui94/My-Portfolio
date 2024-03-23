@@ -48,7 +48,7 @@ function PortfolioProjects({ isHomePage = false }) {
       {!displayProjects.length ? (
         <div className="flex flex-grow flex-col"></div>
       ) : (
-        <div className="flex flex-col gap-8 mb-8">
+        <div className="flex flex-col gap-10 mb-8">
           {displayProjects.map((project, index) => (
             <PortfolioItem key={project.id} project={project} projectIndex={index} />
           ))}

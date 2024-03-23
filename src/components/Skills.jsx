@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom"
 import styled from "styled-components"
 
 const SkillCard = styled.div`
@@ -8,7 +9,7 @@ const SkillCard = styled.div`
   padding: 2rem 2rem;
   gap: 1rem;
   background-color: #000000;
-  border-radius: 10px;
+  border-radius: 0.375rem;
 `
 
 const SkillTitle = styled.h1`
@@ -28,10 +29,11 @@ const SkillBody = styled.div`
 `
 
 function Skills() {
+  const { pathname } = useLocation()
   return (
     <div>
-      <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Skills</h1>
-      <div className="flex flex-col md:flex-row gap-6 my-6 text-gray-100">
+      {pathname === "/about" ? <h1 className="text-2xl sm:text-3xl font-bold text-center">Skills</h1> : null}
+      <div className="flex flex-col md:flex-row gap-6 my-6 text-gray-100 mt-8">
         <SkillCard className="shadow-xl">
           <SkillTitle>Programming Skills</SkillTitle>
           <SkillSubTitle>Front-end</SkillSubTitle>

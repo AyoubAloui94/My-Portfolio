@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /about/
 Disallow: /contact/
+Disallow: /mystory/
 Allow: /home/
 Allow: /portfolio/

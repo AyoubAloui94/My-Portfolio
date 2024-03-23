@@ -24,7 +24,7 @@ function Header() {
   }
 
   return (
-    <header className={`flex gap-2 flex-col sm:flex-row items-center sm:justify-between my-8 px-6 ${sticky}`}>
+    <header className={`flex gap-2 flex-col sm:flex-row items-center sm:justify-between my-4 sm:my-8 px-6 ${sticky}`}>
       <Logo />
       <Navbar />
     </header>

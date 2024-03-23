@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
-const Fact = styled.div``
+const Fact = styled.div`
+  margin-bottom: 0.8rem;
+  padding: 0 2rem;
+`
 
 const FactTitle = styled.h1`
   font-size: larger;
@@ -22,7 +26,13 @@ function FactsAboutMe() {
       </Fact>
       <Fact>
         <FactTitle>How I became a developer</FactTitle>
-        <FactBody>Towards the end of 2019, 2 friends of mine launched an E-commerce startup and needed a web developer so I stepped up since I was the only one out of the 3 of us who had any web development knowledge. Then Covid lockdowns happened and I had more free time to learn and practice my programming skills. I have been writing code ever since.</FactBody>
+        <FactBody>
+          Towards the end of 2019, 2 friends of mine launched an E-commerce startup and needed a web developer so I stepped up since I was the only one out of the 3 of us who had any web development knowledge. Then Covid lockdowns happened and I had more free time to learn and practice my programming skills. I have been writing code ever since. (Full story{" "}
+          <Link className="text-sky-700 hover:text-sky-500 underline underline-offset-2 transition-colors duration-200" to={"/mystory"}>
+            here
+          </Link>{" "}
+          )
+        </FactBody>
       </Fact>
       <Fact>
         <FactTitle>Experience</FactTitle>

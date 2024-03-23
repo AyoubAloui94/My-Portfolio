@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async"
-import MyStory from "../components/MyStory"
 import Skills from "../components/Skills"
 import FactsAboutMe from "../components/FactsAboutMe"
 
@@ -14,7 +13,6 @@ function About() {
       </Helmet>
       <Skills />
       <FactsAboutMe />
-      <MyStory />
     </div>
   )
 }
