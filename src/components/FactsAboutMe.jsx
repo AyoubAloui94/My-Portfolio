@@ -17,6 +17,26 @@ function FactsAboutMe() {
     <div className="flex flex-col my-4 gap-3">
       <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Facts about me</h1>
       <Fact>
+        <FactTitle>Education</FactTitle>
+        <FactBody>Bachelor&lsquo;s degree in Applied Physics at University of Angers, Master&lsquo;s degree of Subatomic physics at University of Nantes. And many online programming courses and hundreds of tutorials if that counts 🤔</FactBody>
+      </Fact>
+      <Fact>
+        <FactTitle>How I became a developer</FactTitle>
+        <FactBody>Towards the end of 2019, 2 friends of mine launched an E-commerce startup and needed a web developer so I stepped up since I was the only one out of the 3 of us who had any web development knowledge. Then Covid lockdowns happened and I had more free time to learn and practice my programming skills. I have been writing code ever since.</FactBody>
+      </Fact>
+      <Fact>
+        <FactTitle>Experience</FactTitle>
+        <FactBody>
+          <p>2019 - 2020 : Freelance front-end Developer </p>
+          <p>2020 - 2023 : Web developer at SAS Fishkingdom </p>
+          <p>2022 - Present : Web developer at Web & IT Genius (self-employed) </p>
+        </FactBody>
+      </Fact>
+      <Fact>
+        <FactTitle>My favorite library</FactTitle>
+        <FactBody>My favorite library is Reactjs. I know this a controversial thing to say as some consider it a framework and not a library, but let&lsquo;s not get into that here 😅 I love the JSX syntax and the ability to use React-hooks (no pun intended) with functional components and I truly enjoy building React apps. Matter of fact, this portfolio site of mine is built with React as a SPA using React-Router-Dom and React-Query to fetch my portfolio projects from the Github API.</FactBody>
+      </Fact>
+      <Fact>
         <FactTitle>How I would describe myself</FactTitle>
         <FactBody>I have a strong memory and an analytical brain. I thrive in fierce competition and constantly feel the need to get better at whatever I do. I am a little bit of a math-head (emphasis on the &lsquo;a&lsquo; in math) in how I do things, always trying to see the full picture first and then zooming-in on the details in a calculated manner. I am a very fast learner.</FactBody>
       </Fact>
