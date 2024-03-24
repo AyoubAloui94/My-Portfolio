@@ -6,7 +6,7 @@ function Footer() {
       <div className="flex flex-col sm:flex-row gap-6 sm:justify-evenly sm:items-end">
         <div className="flex flex-col gap-3">
           <h1 className="text-xl font-bold">Contact</h1>
-          <span>contact@webitgenius.com</span>
+          <span>contact@alouiayoub.com</span>
         </div>
         <div className="flex flex-col gap-3">
           <h1 className="text-xl font-bold">Socials</h1>
@@ -26,7 +26,7 @@ function Footer() {
         <span className="uppercase text-xs font-semibold">
           Copyright &copy; {new Date().getFullYear()}{" "}
           <Link className="hover:text-sky-500 transition-colors duration-300" to={"/home"}>
-            Web & It genius
+            web & it genius
           </Link>
         </span>
       </div>

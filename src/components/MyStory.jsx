@@ -7,7 +7,7 @@ function MyStory() {
         <meta charSet="utf-8" />
         <title>Web & IT Genius | My Story</title>
         <meta name="description" content={"This is the story of how I ended up as a web developer despite having a physics degree"} />
-        <link rel="canonical" href="https://webitgenius.com/mystory" />
+        <link rel="canonical" href="https://alouiayoub.com/mystory" />
       </Helmet>
       <div className="flex flex-col py-6 px-8 items-center gap-4 text-justify">
         <h1 className="text-lg font-bold">Hey there! The name&lsquo;s Ayoub and this is my story</h1>

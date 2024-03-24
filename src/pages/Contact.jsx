@@ -8,7 +8,7 @@ function Contact() {
         <meta charSet="utf-8" />
         <title>Web & IT Genius | Contact</title>
         <meta name="description" content="Wanna get in touch? You can do so via the contact form below" />
-        <link rel="canonical" href="https://webitgenius.com/contact" />
+        <link rel="canonical" href="https://alouiayoub.com/contact" />
       </Helmet>
       <ContactForm />
     </div>
