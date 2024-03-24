@@ -43,7 +43,7 @@ function PortfolioProjects({ isHomePage = false }) {
           <link rel="preload" fetchPriority="high" as="image" href="/imgs/projects/Bankist-App.webp" type="image/webp" />
         </Helmet>
       )}
-      <h1 className="text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
+      <h1 className="text-2xl text-center md:text-start md:text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
 
       {!displayProjects.length ? (
         <div className="flex flex-grow flex-col"></div>
