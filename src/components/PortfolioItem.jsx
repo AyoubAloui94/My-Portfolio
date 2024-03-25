@@ -24,7 +24,7 @@ function PortfolioItem({ project, projectIndex }) {
 
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-24">
-      <div className="md:basis-1/2 w-[20rem] h-60 md:h-96 md:w-full rounded-md shadow-xl">
+      <div className="md:basis-1/2 w-[20rem] h-60 md:h-96 md:w-full rounded-md shadow-xl shadow-gray-400">
         <img src={`/imgs/projects/${name}.webp`} alt={name} className=" object-cover w-full h-full rounded-md" loading={projectIndex === 0 ? "eager" : "lazy"} />
       </div>
       <div className="flex flex-col gap-4 md:basis-1/2">

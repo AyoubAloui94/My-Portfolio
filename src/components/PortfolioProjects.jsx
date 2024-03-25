@@ -37,7 +37,7 @@ function PortfolioProjects({ isHomePage = false }) {
       {!isHomePage && (
         <Helmet prioritizeSeoTags>
           <meta charSet="utf-8" />
-          <title>Web & IT Genius | My Portfolio</title>
+          <title>alouiayoub.com | My Portfolio</title>
           <meta name="description" content="Welcome to my portfolio page! This is a non exhaustive list of some of the projects I had fun building. From simple apps that took a day or an afternoon to build to some pretty complex apps that took a lot of research, time and documentation to build." />
           <link rel="canonical" href="https://alouiayoub.com/portfolio" />
           <link rel="preload" fetchPriority="high" as="image" href="/imgs/projects/Bankist-App.webp" type="image/webp" />

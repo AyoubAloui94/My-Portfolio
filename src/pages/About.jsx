@@ -7,7 +7,7 @@ function About() {
     <div className="min-h-[29rem]">
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
-        <title>Web & IT Genius | About</title>
+        <title>alouiayoub.com | About</title>
         <meta name="description" content={"Here is my skillset along with some more info about me"} />
         <link rel="canonical" href="https://alouiayoub.com/about" />
       </Helmet>

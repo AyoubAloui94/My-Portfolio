@@ -13,7 +13,7 @@ function MyBackground() {
           {/* <p className="md:text-lg"> During the pandemic, I found myself at home with a lot of time on my hands so I picked up web development and I ended up being part of an E-commerce startup where I was the one who developed the site, worked on SEO and integrations. I discovered my passion for programming and ended up taking dedicated courses, building multiple projects using React, React Native and NodeJs.</p> */}
           <p className="md:text-lg">
             <Link to={"/about"} className="hover:text-sky-300 transition duration-300">
-              You wanna know my story and how I ended up as a Web developer? Find out here
+              Interested in how I became a Web developer? Check out my About page
             </Link>{" "}
           </p>
         </div>
