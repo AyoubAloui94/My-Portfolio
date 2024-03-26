@@ -18,7 +18,7 @@ function MyBackground() {
           </p>
         </div>
         <div className="flex flex-col flex-1  md:justify-center items-center md:items-start">
-          <img src="imgs/me.webp" className="md:max-h-80 md:max-w-80 w-60 md:w-52 aspect-square md:h-52 object-cover rounded-full md:rounded-xl" alt="photo-2" loading="eager" />
+          <img src="imgs/myself.webp" className="md:max-h-80 md:max-w-80 w-60 md:w-52 aspect-square md:h-52 object-cover rounded-full md:rounded-xl" alt="photo-2" loading="eager" />
         </div>
         <div className="md:flex flex-col flex-1  md:justify-center md:pr-10 hidden">
           <img src="imgs/photo-1.webp" className="max-h-60 object-cover aspect-square md:w-full h-full rounded-xl" alt="photo-1" loading="eager" />
