@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async"
 
 function PortfolioProjects({ isHomePage = false }) {
   const { projects, isLoading, count, featuredProjects } = useProjects()
+  console.log(projects)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
@@ -40,7 +41,6 @@ function PortfolioProjects({ isHomePage = false }) {
           <title>alouiayoub.com | My Portfolio</title>
           <meta name="description" content="Welcome to my portfolio page! This is a non exhaustive list of some of the projects I had fun building. From simple apps that took a day or an afternoon to build to some pretty complex apps that took a lot of research, time and documentation to build." />
           <link rel="canonical" href="https://alouiayoub.com/portfolio" />
-          <link rel="preload" fetchPriority="high" as="image" href="/imgs/projects/Bankist-App.webp" type="image/webp" />
         </Helmet>
       )}
       <h1 className="text-2xl text-center md:text-start md:text-3xl font-bold mb-8">{isHomePage ? " Featured Projects" : "Projects"}</h1>
