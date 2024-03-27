@@ -42,7 +42,7 @@ function PortfolioItem({ project, projectIndex }) {
             ))}
           </div>
         )}
-        <div className="flex gap-4 justify-center items-center mt-3  md:text-[1.1rem] font-bold">
+        <div className="flex gap-4 justify-center items-center mt-3 text-sm md:text-base font-bold">
           <Link className="bg-[#4f46e5] shadow-md hover:bg-[#6159f7] transition duration-300 text-gray-100 w-28 md:w-32 py-2 rounded-xl text-center" to={website} target="_blank" rel="noopener noreferrer">
             View App
           </Link>
