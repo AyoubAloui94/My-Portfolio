@@ -23,7 +23,7 @@ export async function getAllProjects() {
         Authorization: `Token ${import.meta.env.VITE_GIT_TOKEN}`
       }
     })
-    console.log(res)
+
     if (!res) return
     const data = res.data
     console.log(res)
