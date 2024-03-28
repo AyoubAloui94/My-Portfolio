@@ -26,7 +26,7 @@ export async function getAllProjects() {
 
     if (!res) return
     const data = res.data
-    console.log(res)
+
     const count = data.length
     return { data, count }
   } catch (error) {
