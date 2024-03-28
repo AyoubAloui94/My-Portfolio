@@ -6,6 +6,8 @@ function PortfolioItem({ project, projectIndex }) {
 
   const tags = topics.length ? topics?.filter(topic => topic !== "react-datepicker" && topic !== "single-page-app") : topics
 
+  const x = ""
+
   // const [src, setSrc] = useState("")
 
   // const test = useCallback(
