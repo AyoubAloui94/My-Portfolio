@@ -7,7 +7,7 @@ import Pagination from "./Pagination"
 import { Helmet } from "react-helmet-async"
 
 function PortfolioProjects({ isHomePage = false }) {
-  const { projects, isLoading, count, featuredProjects } = useProjects()
+  const { projects, isLoading, count, featuredProjects, error } = useProjects()
 
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
@@ -30,6 +30,22 @@ function PortfolioProjects({ isHomePage = false }) {
       <div className="flex flex-grow flex-col min-h-[40rem]">
         <Spinner />
       </div>
+    )
+
+  if (error)
+    return (
+      <>
+        {isHomePage ? null : (
+          <>
+            <div className="flex flex-grow flex-col min-h-[30rem] justify-center items-center">
+              <div className="text-lg text-center border-red-700 border-2 text-red-700 font-semibold py-3 px-4 rounded-md mx-8">
+                <p>Unable to fetch projects :( please check your internet and try again later</p>
+                <p className="italic text-sm font-normal">{error}</p>
+              </div>
+            </div>
+          </>
+        )}
+      </>
     )
 
   return (

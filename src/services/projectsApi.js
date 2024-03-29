@@ -8,11 +8,12 @@ export async function getProjects(page) {
       }
     })
 
-    if (!res) return
+    if (!res) throw new Error("Unable to fetch")
     const data = res.data
     return { data }
   } catch (error) {
     console.log(error)
+    return { error }
   }
 }
 
@@ -24,12 +25,13 @@ export async function getAllProjects() {
       }
     })
 
-    if (!res) return
+    if (!res) throw new Error("Unable to fetch")
     const data = res.data
 
     const count = data.length
     return { data, count }
   } catch (error) {
     console.log(error)
+    return { error }
   }
 }
