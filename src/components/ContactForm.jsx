@@ -28,7 +28,10 @@ function ContactForm() {
       }
       setIsLoading(true)
       await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, params, {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        limitRate: {
+          throttle: 300000
+        }
       })
 
       toast.success("Message successfully sent!")
@@ -37,7 +40,10 @@ function ContactForm() {
       emailRef.current.value = ""
       messageRef.current.value = ""
     } catch (error) {
-      toast.error(error.text || error.message)
+      let errMsg
+      if (error?.status === 429) errMsg = `${error?.text}! Try again in a few minutes.`
+      else errMsg = error?.text || error?.message
+      toast.error(errMsg)
       console.log(error)
     } finally {
       setIsLoading(false)
@@ -46,7 +52,7 @@ function ContactForm() {
 
   return (
     <form className="flex flex-col justify-center gap-4" onSubmit={handleSubmit}>
-      <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef}>
+      <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef} required>
         Name*
       </FormRow>
       <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required>
