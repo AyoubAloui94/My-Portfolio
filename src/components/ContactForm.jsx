@@ -24,6 +24,7 @@ function ContactForm() {
         user_name: nameRef.current.value,
         user_email: emailRef.current.value,
         message: messageRef.current.value,
+        to_name: "Ayoub",
         "g-recaptcha-response": recaptchaValue
       }
       setIsLoading(true)
