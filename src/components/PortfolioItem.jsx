@@ -27,17 +27,17 @@ function PortfolioItem({ project, projectIndex }) {
 
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-24">
-      <div className="md:basis-1/2 w-[20rem] h-60 md:h-96 md:w-full rounded-md shadow-xl shadow-gray-400">
-        <img src={`/imgs/projects/${name}.webp`} alt={name} className=" object-cover w-full h-full rounded-md" loading={projectIndex === 0 ? "eager" : "lazy"} />
+      <div className="md:basis-1/2 w-[20.5rem] h-[14rem] sm:w-[28rem] sm:h-[19rem] md:h-96 md:w-full rounded-xl md:rounded-md shadow-xl shadow-gray-400">
+        <img src={`/imgs/projects/${name}.webp`} alt={name} className=" object-cover w-full h-full rounded-xl md:rounded-md" loading={projectIndex === 0 ? "eager" : "lazy"} />
       </div>
       <div className="flex flex-col gap-4 md:basis-1/2">
         <h1 className="text-xl text-center md:text-start md:text-2xl font-semibold">{formatName(name)}</h1>
         {description ? <p className="md:text-xl text-justify">{description}</p> : <p>No description yet.</p>}
         {tags.length > 0 && (
           <div className="flex gap-1 flex-wrap justify-center">
-            {tags.map(topic => (
-              <span className="bg-gradient-to-tr from-[#271334] to-[#400a7e] text-gray-100 px-2 py-1 rounded-lg font-semibold text-xs" key={`${name}-${topic}`}>
-                {topic}
+            {tags.map(tag => (
+              <span className="bg-gradient-to-tr from-[#271334] to-[#400a7e] text-gray-100 px-2 py-1 rounded-lg font-semibold text-xs md:text-sm" key={`${name}-${tag}`}>
+                {tag}
               </span>
             ))}
           </div>
