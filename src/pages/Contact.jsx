@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm"
 
 function Contact() {
   return (
-    <div className="flex flex-col flex-grow sm:mx-32 md:mx-44 lg:mx-60 xl:mx-96 md:min-h-[70dvh] xl:min-h-[80dvh]">
+    <div className="flex flex-col flex-grow sm:mx-32 md:mx-44 lg:mx-60 xl:mx-96 md:min-h-[70dvh] xl:min-h-[70dvh]">
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>alouiayoub.com | Contact</title>
