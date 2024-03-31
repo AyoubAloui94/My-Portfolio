@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet-async"
 
 function PortfolioProjects({ isHomePage = false }) {
   const { projects, isLoading, count, featuredProjects, error } = useProjects()
-  console.log(projects)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = !searchParams.get("page") ? 1 : Number(searchParams.get("page"))
@@ -50,7 +49,7 @@ function PortfolioProjects({ isHomePage = false }) {
     )
 
   return (
-    <>
+    <div className="md:mx-6">
       {!isHomePage && (
         <Helmet prioritizeSeoTags>
           <meta charSet="utf-8" />
@@ -71,7 +70,7 @@ function PortfolioProjects({ isHomePage = false }) {
         </div>
       )}
       {isHomePage ? null : count > import.meta.env.VITE_PER_PAGE ? <Pagination count={count} /> : null}
-    </>
+    </div>
   )
 }
 
