@@ -5,7 +5,7 @@ import Skills from "../components/Skills"
 
 function Home() {
   return (
-    <div className="min-h-[29rem]">
+    <div className="min-h-[100dvh]">
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>alouiayoub.com | Home</title>

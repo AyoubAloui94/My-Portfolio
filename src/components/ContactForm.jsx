@@ -52,7 +52,7 @@ function ContactForm() {
   }
 
   return (
-    <form className="flex flex-col justify-center gap-4" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-4 justify-center" onSubmit={handleSubmit}>
       <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef} required>
         Name*
       </FormRow>

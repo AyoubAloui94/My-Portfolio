@@ -4,7 +4,7 @@ import FactsAboutMe from "../components/FactsAboutMe"
 
 function About() {
   return (
-    <div className="min-h-[29rem]">
+    <div className="min-h-[100dvh]">
       <Helmet prioritizeSeoTags>
         <meta charSet="utf-8" />
         <title>alouiayoub.com | About</title>

@@ -2,7 +2,7 @@ import axios from "axios"
 
 export async function getProjects(page) {
   try {
-    const res = await axios.get(`${import.meta.env.VITE_GITHUB_URL}?per_page=${import.meta.env.VITE_PER_PAGE}&page=${page}`, {
+    const res = await axios.get(`${import.meta.env.VITE_GITHUB_URL}?sort=updated&per_page=${import.meta.env.VITE_PER_PAGE}&page=${page}`, {
       headers: {
         Authorization: `Token ${import.meta.env.VITE_GIT_TOKEN}`
       }
@@ -19,7 +19,7 @@ export async function getProjects(page) {
 
 export async function getAllProjects() {
   try {
-    const res = await axios.get(`${import.meta.env.VITE_GITHUB_URL}`, {
+    const res = await axios.get(`${import.meta.env.VITE_GITHUB_URL}?sort=updated`, {
       headers: {
         Authorization: `Token ${import.meta.env.VITE_GIT_TOKEN}`
       }

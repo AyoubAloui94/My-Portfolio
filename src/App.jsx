@@ -22,7 +22,7 @@ function App() {
         <ReactQueryDevtools initialIsOpen={false} />
         <BrowserRouter>
           <Header />
-          <div className="mx-6 font-sans">
+          <div className="px-6 font-sans max-w-[100rem] mx-auto">
             <ScrollToTop />
             <Routes>
               <Route index element={<Navigate replace to={"home"} />} />
