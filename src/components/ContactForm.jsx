@@ -53,10 +53,10 @@ function ContactForm() {
 
   return (
     <form className="flex flex-col gap-4 justify-center mt-10" onSubmit={handleSubmit}>
-      <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef} required>
+      <FormRow name="user_name" id="name" type="text" placeholder="Your name" ref={nameRef} required autoComplete="name">
         Name*
       </FormRow>
-      <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required>
+      <FormRow name="user_email" id="email" type="text" placeholder="Your email address" ref={emailRef} required autoComplete="email">
         Your email*
       </FormRow>
       <FormRow name="message" id="message" type="text" placeholder="Your message" ref={messageRef} isTextArea={true} required>
