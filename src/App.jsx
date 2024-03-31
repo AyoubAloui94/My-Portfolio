@@ -1,7 +1,4 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import Contact from "./pages/Contact"
-import Portfolio from "./pages/Portfolio"
 
 import Header from "./components/Header"
 import { Toaster } from "react-hot-toast"
@@ -10,10 +7,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import ScrollToTop from "./components/ScrollToTop"
 import { HelmetProvider } from "react-helmet-async"
-import About from "./pages/About"
-import MyStory from "./components/MyStory"
+
+import { Suspense, lazy } from "react"
+import Spinner from "./components/Spinner"
 
 const queryClient = new QueryClient()
+
+const Home = lazy(() => import("./pages/Home"))
+const Portfolio = lazy(() => import("./pages/Portfolio"))
+const Contact = lazy(() => import("./pages/Contact"))
+const About = lazy(() => import("./pages/About"))
+const MyStory = lazy(() => import("./pages/MyStory"))
 
 function App() {
   return (
@@ -24,15 +28,23 @@ function App() {
           <Header />
           <div className="px-6 font-sans max-w-[100rem] mx-auto">
             <ScrollToTop />
-            <Routes>
-              <Route index element={<Navigate replace to={"home"} />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/mystory" element={<MyStory />} />
-              <Route path="*" element={<Navigate to={"/"} />} />
-            </Routes>
+            <Suspense
+              fallback={
+                <div className="h-[calc(100vh-5rem)] m-[2.5rem]">
+                  <Spinner />
+                </div>
+              }
+            >
+              <Routes>
+                <Route index element={<Navigate replace to={"home"} />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/mystory" element={<MyStory />} />
+                <Route path="*" element={<Navigate to={"/"} />} />
+              </Routes>
+            </Suspense>
             <Toaster
               position="top-center"
               gutter={12}
