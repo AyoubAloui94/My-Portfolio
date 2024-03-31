@@ -50,7 +50,7 @@ function PortfolioProjects({ isHomePage = false }) {
     )
 
   return (
-    <div className="min-h-[100dvh]">
+    <>
       {!isHomePage && (
         <Helmet prioritizeSeoTags>
           <meta charSet="utf-8" />
@@ -71,7 +71,7 @@ function PortfolioProjects({ isHomePage = false }) {
         </div>
       )}
       {isHomePage ? null : count > import.meta.env.VITE_PER_PAGE ? <Pagination count={count} /> : null}
-    </div>
+    </>
   )
 }
 
