@@ -74,6 +74,7 @@ function ContactForm() {
             }
           }}
           onExpire={() => turnstile.reset()}
+          fixedSize={true}
         />
       </div>
       <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>
