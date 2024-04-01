@@ -1,35 +1,15 @@
 import { Link } from "react-router-dom"
 import { formatName } from "../utils/helpers"
-import {} from "react-dom"
 
-function PortfolioItem({ project }) {
+function PortfolioItem({ project, projectIndex }) {
   const { name, homepage: website, html_url: repoUrl, description, topics, id } = project
 
   const tags = topics.length ? topics?.filter(topic => topic !== "react-datepicker" && topic !== "single-page-app") : topics
 
-  // const [src, setSrc] = useState("")
-
-  // const test = useCallback(
-  //   function test(exists) {
-  //     if (exists) setSrc(`/imgs/${name}.webp`)
-  //     else setSrc("/imgs/photo-3.webp")
-  //   },
-  //   [name]
-  // )
-
-  // useEffect(
-  //   function () {
-  //     checkIfImageExists(`/imgs/${name}.webp`, test)
-  //   },
-  //   [name, test]
-  // )
-
-  //formatName(name)
-
   return (
     <div className="flex flex-col md:flex-row justify-evenly items-center gap-4 md:gap-10">
       <div className="md:basis-1/2 w-[21rem] h-[14rem] sm:w-[28rem] sm:h-[19rem] md:h-96 xl:h-[26rem] max-h-[30rem] max-w-[40rem] rounded-lg md:rounded-md shadow-xl shadow-gray-400">
-        <img src={`/imgs/projects/${name}.webp`} alt={name} className="contrast-[0.9] object-cover w-full h-full rounded-lg md:rounded-md" loading={"lazy"} />
+        <img src={`/imgs/projects/${name}.webp`} alt={name} className="contrast-[0.9] object-cover w-full h-full rounded-lg md:rounded-md" loading={projectIndex === 0 ? "eager" : "lazy"} />
       </div>
       <div className="flex flex-col gap-4 md:basis-1/2">
         <h1 className="text-xl text-center md:text-start md:text-2xl font-semibold">{formatName(name)}</h1>

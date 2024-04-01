@@ -64,8 +64,8 @@ function PortfolioProjects({ isHomePage = false }) {
         <div className="flex flex-grow flex-col"></div>
       ) : (
         <div className="flex flex-col gap-10 mb-8">
-          {displayProjects.map(project => (
-            <PortfolioItem key={project.id} project={project} />
+          {displayProjects.map((project, index) => (
+            <PortfolioItem key={project.id} project={project} projectIndex={index} />
           ))}
         </div>
       )}
