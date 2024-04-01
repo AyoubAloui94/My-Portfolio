@@ -3,29 +3,29 @@ import FormRow from "./FormRow"
 import emailjs from "@emailjs/browser"
 import { toast } from "react-hot-toast"
 import SpinnerMini from "./SpinnerMini"
-import ReCAPTCHA from "react-google-recaptcha"
+// import ReCAPTCHA from "react-google-recaptcha"
+import Turnstile, { useTurnstile } from "react-turnstile"
 
 function ContactForm() {
   const nameRef = useRef()
   const emailRef = useRef()
   const messageRef = useRef()
-  const recaptchaRef = useRef()
+  const [token, setToken] = useState("")
+  const turnstile = useTurnstile()
 
   const [isLoading, setIsLoading] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      const recaptchaValue = recaptchaRef.current.getValue()
       const [name, email, message] = [nameRef.current.value, emailRef.current.value, messageRef.current.value]
       if (!name || !email || !message) return
-      if (!recaptchaValue) throw new Error("reCaptcha invalid")
+      if (!token) throw new Error("reCaptcha invalid")
       const params = {
         user_name: nameRef.current.value,
         user_email: emailRef.current.value,
         message: messageRef.current.value,
-        to_name: "Ayoub",
-        "g-recaptcha-response": recaptchaValue
+        to_name: "Ayoub"
       }
       setIsLoading(true)
       await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, params, {
@@ -63,7 +63,18 @@ function ContactForm() {
         Message*
       </FormRow>
       <div className="flex justify-center">
-        <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} style={{ minHeight: "4.85rem" }} />
+        {/* <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} style={{ minHeight: "4.85rem" }} /> */}
+        <Turnstile
+          sitekey={import.meta.env.VITE_SITE_KEY}
+          onVerify={token => {
+            try {
+              setToken(token)
+            } catch (error) {
+              throw new Error(error.message)
+            }
+          }}
+          onExpire={() => turnstile.reset()}
+        />
       </div>
       <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>
         {isLoading ? <SpinnerMini /> : "Submit"}
