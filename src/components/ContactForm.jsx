@@ -10,7 +10,6 @@ function ContactForm() {
   const emailRef = useRef()
   const messageRef = useRef()
   const captchaRef = useRef()
-  // const [token, setToken] = useState(null)
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -28,7 +27,6 @@ function ContactForm() {
   async function handleEmail(token) {
     try {
       if (!token) throw new Error("captcha invalid")
-      // setIsLoading(true)
 
       const params = {
         user_name: nameRef.current.value,
@@ -36,6 +34,7 @@ function ContactForm() {
         message: messageRef.current.value,
         to_name: "Ayoub"
       }
+
       await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, params, {
         publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         limitRate: {
@@ -83,6 +82,7 @@ function ContactForm() {
           ref={captchaRef}
           onClose={() => setIsLoading(false)}
           onError={captchaRef.current?.resetCaptcha()}
+          onExpire={captchaRef.current?.resetCaptcha()}
         />
       </div>
       <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>

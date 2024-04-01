@@ -25,5 +25,6 @@ dist-ssr
 
 .env
 
-ContactForm-v1.jsx
-ContactForm-v2.jsx
+ContactForm-hcaptcha.jsx
+ContactForm-reCaptcha.jsx
+ContactForm-turnstile.jsx
