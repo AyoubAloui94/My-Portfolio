@@ -30,7 +30,7 @@ function App() {
             <ScrollToTop />
             <Suspense
               fallback={
-                <div className="h-[calc(100vh-10rem)] m-[2.5rem]">
+                <div className="h-[calc(100vh-10rem)]">
                   <Spinner />
                 </div>
               }
