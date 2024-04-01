@@ -62,8 +62,8 @@ function ContactForm() {
       <FormRow name="message" id="message" type="text" placeholder="Your message" ref={messageRef} isTextArea={true} required>
         Message*
       </FormRow>
-      <div className="flex justify-center min-h-15">
-        <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} />
+      <div className="flex justify-center">
+        <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} style={{ minHeight: "4.85rem" }} />
       </div>
       <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>
         {isLoading ? <SpinnerMini /> : "Submit"}
