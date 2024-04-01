@@ -10,8 +10,8 @@ function ContactForm() {
   const nameRef = useRef()
   const emailRef = useRef()
   const messageRef = useRef()
-  const [token, setToken] = useState("")
   const turnstile = useTurnstile()
+  const captchaRef = useRef()
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -20,6 +20,7 @@ function ContactForm() {
     try {
       const [name, email, message] = [nameRef.current.value, emailRef.current.value, messageRef.current.value]
       if (!name || !email || !message) return
+      const token = captchaRef.current.childNodes[1].value
       if (!token) throw new Error("reCaptcha invalid")
       const params = {
         user_name: nameRef.current.value,
@@ -64,18 +65,7 @@ function ContactForm() {
       </FormRow>
       <div className="flex justify-center">
         {/* <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} ref={recaptchaRef} style={{ minHeight: "4.85rem" }} /> */}
-        <Turnstile
-          sitekey={import.meta.env.VITE_SITE_KEY}
-          onVerify={token => {
-            try {
-              setToken(token)
-            } catch (error) {
-              throw new Error(error.message)
-            }
-          }}
-          onExpire={() => turnstile.reset()}
-          fixedSize={true}
-        />
+        <Turnstile sitekey={import.meta.env.VITE_SITE_KEY} onExpire={() => turnstile.reset()} fixedSize={true} theme="dark" userRef={captchaRef} />
       </div>
       <button type="submit" className="bg-[#4f46e5] text-gray-100 py-3 text-lg font-bold w-24 mx-7 rounded-2xl self-center text-center" disabled={isLoading}>
         {isLoading ? <SpinnerMini /> : "Submit"}
