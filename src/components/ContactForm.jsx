@@ -37,7 +37,10 @@ function ContactForm() {
         to_name: "Ayoub"
       }
       await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, params, {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        limitRate: {
+          throttle: 300000
+        }
       })
 
       toast.success("Message successfully sent!")
