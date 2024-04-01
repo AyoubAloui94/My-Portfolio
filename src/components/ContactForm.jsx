@@ -28,7 +28,7 @@ function ContactForm() {
   async function handleEmail(token) {
     try {
       if (!token) throw new Error("captcha invalid")
-      setIsLoading(true)
+      // setIsLoading(true)
 
       const params = {
         user_name: nameRef.current.value,
