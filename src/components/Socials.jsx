@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function Socials() {
   return (
     <div className="flex flex-col justify-center items-center gap-4 mt-5">
-      <h1 className="text-center font-semibold text-xl">Socials</h1>
+      <h1 className="text-center font-semibold text-lg">Socials</h1>
       <div className="flex gap-3">
         <Link title="github" to="https://github.com/KaneWatson" target="_blank" rel="noopener noreferrer">
           <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98">
