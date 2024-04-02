@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
 import ContactForm from "../components/ContactForm"
+import ContactText from "../components/ContactText"
+import Socials from "../components/Socials"
 
 function Contact() {
   return (
@@ -10,6 +12,8 @@ function Contact() {
         <meta name="description" content="Wanna get in touch? You can do so via the contact form below" />
         <link rel="canonical" href="https://alouiayoub.com/contact" />
       </Helmet>
+      <ContactText />
+      <Socials />
       <ContactForm />
     </div>
   )
