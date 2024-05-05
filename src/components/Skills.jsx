@@ -51,7 +51,7 @@ function Skills() {
         <SkillCard className="shadow-xl shadow-gray-400">
           <SkillTitle>Programming Skills</SkillTitle>
           <SkillSubTitle>Front-end</SkillSubTitle>
-          <SkillBody>HTML - CSS - SASS - Javascript - ES6 - React - Typescript - React Native - SPAs (single-page apps)</SkillBody>
+          <SkillBody>HTML - CSS - SASS - Javascript - ES6 - React - Typescript - React Native - Python - SPAs (single-page apps)</SkillBody>
           <SkillSubTitle>Back-end</SkillSubTitle>
           <SkillBody>Node.js - Express.js - MongoDB - RESTful APIs - SupabaseJs</SkillBody>
         </SkillCard>
