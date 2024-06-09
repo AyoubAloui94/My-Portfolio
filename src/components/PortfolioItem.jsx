@@ -3,7 +3,6 @@ import { formatName } from "../utils/helpers"
 
 function PortfolioItem({ project, projectIndex }) {
   const { name, homepage: website, html_url: repoUrl, description, topics, id } = project
-  console.log(project)
 
   const tags = topics.length ? topics?.filter(topic => topic !== "react-datepicker" && topic !== "single-page-app") : topics
 
