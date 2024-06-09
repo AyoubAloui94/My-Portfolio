@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function MyBackground() {
   return (
-    <div className="bg-gradient-to-tr from-[#000000] to-[#180034] px-7 py-8 text-gray-50 rounded-md shadow-xl shadow-gray-400">
+    <div className="bg-gradient-to-tr from-[#000000] to-[#180034] px-7 py-8 text-gray-50 rounded-md shadow-xl shadow-gray-400 gradient-background">
       <div className="grid grid-cols-1 md:grid-cols-[4fr,1fr] gap-6 md:gap-4">
         <div className="flex flex-col gap-4 text-justify">
           <h2 className="text-center md:text-left text-lg font-bold">A little bit about me</h2>
