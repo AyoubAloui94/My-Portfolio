@@ -51,21 +51,21 @@ function Skills() {
         <SkillCard className="shadow-xl shadow-gray-400">
           <SkillTitle>Programming Skills</SkillTitle>
           <SkillSubTitle>Front-end</SkillSubTitle>
-          <SkillBody>HTML - CSS - SASS - Javascript - ES6 - React - Typescript - React Native - SPAs (single-page apps)</SkillBody>
+          <SkillBody>HTML • CSS • SASS • Javascript • ES6 • React • Typescript • React Native • SPAs (single-page apps)</SkillBody>
           <SkillSubTitle>Back-end</SkillSubTitle>
-          <SkillBody>Python - Node.js - Express.js - MongoDB - RESTful APIs - SupabaseJs</SkillBody>
+          <SkillBody>Python • Node.js • Express.js • Flask • NextJs • MongoDB • RESTful APIs • SupabaseJs</SkillBody>
         </SkillCard>
         <SkillCard className="shadow-xl shadow-gray-400">
           <SkillTitle>Libraries & Dev Tools</SkillTitle>
           <SkillSubTitle>Libraries</SkillSubTitle>
-          <SkillBody>Bootstrap - Tailwind CSS - styled-components - Redux - Leaflet - Recharts - tanstack/react-query</SkillBody>
+          <SkillBody>Bootstrap • Tailwind CSS • styled•components • Redux • Leaflet • Recharts • tanstack/react-query</SkillBody>
           <SkillSubTitle>Tools</SkillSubTitle>
-          <SkillBody>Vite - VSCode - Git - Github - Netlify - Vercel - Render - Postman</SkillBody>
+          <SkillBody>Vite • VSCode • Git • Github • Netlify • Vercel • Render • Postman • PyCharm</SkillBody>
         </SkillCard>
         <SkillCard className="shadow-xl shadow-gray-400">
           <SkillTitle>Other Skills</SkillTitle>
           <SkillSubTitle>Extras</SkillSubTitle>
-          <SkillBody>Search Engine Optimization (SEO) - Shopify - Google Search Console - Responsive Design</SkillBody>
+          <SkillBody>Search Engine Optimization (SEO) • Shopify • Google Search Console • Responsive Design</SkillBody>
           <SkillSubTitle>Languages I speak</SkillSubTitle>
           <SkillBody>I am trilingual, I speak English, French and Arabic on a daily basis for the past 20 years</SkillBody>
         </SkillCard>
