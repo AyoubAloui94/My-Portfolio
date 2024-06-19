@@ -58,7 +58,7 @@ function Skills() {
         <SkillCard className="shadow-xl shadow-gray-400">
           <SkillTitle>Libraries & Dev Tools</SkillTitle>
           <SkillSubTitle>Libraries</SkillSubTitle>
-          <SkillBody>Bootstrap • Tailwind CSS • styled•components • Redux • Leaflet • Recharts • tanstack/react-query</SkillBody>
+          <SkillBody>Bootstrap • Tailwind CSS • styled-components • Redux • Leaflet • Recharts • tanstack/react-query</SkillBody>
           <SkillSubTitle>Tools</SkillSubTitle>
           <SkillBody>Vite • VSCode • Git • Github • Netlify • Vercel • Render • Postman • PyCharm</SkillBody>
         </SkillCard>
