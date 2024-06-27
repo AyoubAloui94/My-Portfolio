@@ -34,7 +34,7 @@ export function useProjects() {
 
   const error = error1?.message || error2?.message
 
-  const featuredProjects = allProjects?.length ? allProjects?.filter(proj => proj.id === 761037894 || proj.id === 718243904 || proj.id === 681357811 || proj.id === 812389453 || proj.id === 641403483) : []
+  const featuredProjects = allProjects?.length ? allProjects?.filter(proj => proj.id === 761037894 || proj.id === 718243904 || proj.id === 818406031 || proj.id === 812389453 || proj.id === 641403483) : []
 
   const isLoading = isLoading1 || isLoading2
 
